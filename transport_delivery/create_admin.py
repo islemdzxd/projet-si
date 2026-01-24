@@ -7,36 +7,34 @@ django.setup()
 
 from django.contrib.auth.models import User
 
-# Create admin user
-email = 'test@test.com'
-password = 'test123'
-username = 'testadmin'
+def ensure_admin(email, password, username):
+    """Crée ou met à jour un compte admin."""
+    if User.objects.filter(email=email).exists():
+        user = User.objects.get(email=email)
+        user.set_password(password)
+        user.is_staff = True
+        user.is_superuser = True
+        user.save()
+        print(f"  Admin mis à jour: {email}")
+    elif User.objects.filter(username=username).exists():
+        user = User.objects.get(username=username)
+        user.email = email
+        user.set_password(password)
+        user.is_staff = True
+        user.is_superuser = True
+        user.save()
+        print(f"  Admin mis à jour: {email}")
+    else:
+        user = User.objects.create_superuser(
+            username=username,
+            email=email,
+            password=password
+        )
+        print(f"  Admin créé: {email}")
+    return user
 
-# Check if user already exists
-if User.objects.filter(email=email).exists():
-    user = User.objects.get(email=email)
-    user.set_password(password)
-    user.is_staff = True
-    user.is_superuser = True
-    user.save()
-    print(f"Admin user updated: {email}")
-elif User.objects.filter(username=username).exists():
-    user = User.objects.get(username=username)
-    user.email = email
-    user.set_password(password)
-    user.is_staff = True
-    user.is_superuser = True
-    user.save()
-    print(f"Admin user updated: {email}")
-else:
-    user = User.objects.create_superuser(
-        username=username,
-        email=email,
-        password=password
-    )
-    print(f"Admin user created: {email}")
-
-print(f"Username: {user.username}")
-print(f"Email: {user.email}")
-print("Password: test123")
-print("You can now log in with these credentials.")
+# Comptes utilisables pour le frontend (email) et Django Admin (username)
+print("Création des comptes administrateur...")
+ensure_admin('admin@transport.com', 'admin123', 'admin')
+ensure_admin('test@test.com', 'test123', 'testadmin')
+print("Terminé. Compte principal: admin@transport.com / admin123")

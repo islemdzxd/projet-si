@@ -27,7 +27,8 @@ Application web full‑stack de gestion d’une société de transport : expédi
 ```
 (racine du dépôt)
 ├── README.md
-├── .gitattributes
+├── MANUEL_UTILISATION.md        # Guide d'utilisation de l'application
+├── .gitignore, .gitattributes
 └── transport_delivery/
     ├── core/                    # App : modèles, vues, serializers, admin
     ├── transport_delivery/      # Django : settings, urls
@@ -35,6 +36,8 @@ Application web full‑stack de gestion d’une société de transport : expédi
     ├── manage.py, create_admin.py, populate_db.py, requirements.txt
     └── ...
 ```
+
+► **Guide utilisateur :** [MANUEL_UTILISATION.md](MANUEL_UTILISATION.md)
 
 ---
 
@@ -101,11 +104,14 @@ npm run dev
 
 ## Comptes de connexion
 
-| Contexte          | Identifiant              | Mot de passe  |
-|-------------------|--------------------------|---------------|
-| **Frontend (email)** | `admin@transport.com`    | `admin123`    |
-| **Frontend (email)** | `test@test.com`          | `test123`     |
-| **Django Admin**  | `admin` ou `testadmin`   | `admin123` / `test123` |
+**Compte principal (frontend et Django Admin) :**
+
+- **Email :** `admin@transport.com`
+- **Mot de passe :** `admin123`
+
+Pour le **Django Admin** (http://localhost:8000/admin/) : identifiant `admin`, mot de passe `admin123`.
+
+*(Compte de secours : `test@test.com` / `test123`.)*
 
 ---
 
@@ -121,27 +127,7 @@ npm run dev
 
 ---
 
-## Mettre le projet sur GitHub
 
-À la **racine du dépôt** (dossier où se trouvent `README.md`, `.gitattributes` et le dossier `transport_delivery/`) :
 
-```bash
-git init
-git add .
-git commit -m "TransportPro - Gestion des livraisons"
-```
-
-1. Sur **https://github.com** : **New repository** (ex. `transport_delivery`), sans README, sans .gitignore.  
-2. Puis :
-
-```bash
-git remote add origin https://github.com/VOTRE_USERNAME/transport_delivery.git
-git branch -M main
-git push -u origin main
-```
-
-*(Remplacez `VOTRE_USERNAME` et `transport_delivery` par votre compte GitHub et le nom du dépôt.)*
-
----
 
 

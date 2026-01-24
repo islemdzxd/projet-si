@@ -8,8 +8,8 @@ Guide d'utilisation de l'application de gestion des livraisons TransportPro.
 
 - **URL :** http://localhost:3000 (après avoir lancé le backend et le frontend).
 - **Identifiants :**
-  - Email : `admin@transport.com` — Mot de passe : `admin123`
-  - ou Email : `test@test.com` — Mot de passe : `test123`
+  - **Email :** `admin@transport.com`
+  - **Mot de passe :** `admin123`
 
 Saisir l’email et le mot de passe puis cliquer sur **Se connecter**. En cas d’erreur, un message s’affiche sous le formulaire.
 
