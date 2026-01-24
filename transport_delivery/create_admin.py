@@ -8,9 +8,9 @@ django.setup()
 from django.contrib.auth.models import User
 
 # Create admin user
-email = 'islemchettouf@gmail.com'
-password = 'admin123'
-username = 'admin'
+email = 'test@test.com'
+password = 'test123'
+username = 'testadmin'
 
 # Check if user already exists
 if User.objects.filter(email=email).exists():
@@ -38,5 +38,5 @@ else:
 
 print(f"Username: {user.username}")
 print(f"Email: {user.email}")
-print("Password: admin123")
+print("Password: test123")
 print("You can now log in with these credentials.")
