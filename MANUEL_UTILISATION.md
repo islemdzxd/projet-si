@@ -127,7 +127,7 @@ Ouvre la **Gestion des Expéditions** (voir section 5). Le montant d’une expé
 
 Cliquer sur l’icône **Déconnexion** en bas à gauche du menu. La session est fermée et l’écran de connexion s’affiche.
 
----
+-------
 
 ## Raccourcis utiles
 
