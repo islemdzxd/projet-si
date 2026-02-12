@@ -121,7 +121,7 @@ Ouvre la **Gestion des Expéditions** (voir section 5). Le montant d’une expé
 - **Nouvelle réclamation :** **Nouvelle Réclamation** → Client, Type, Description, Statut → **Créer**.
 - **Modifier** / **Supprimer** selon les actions affichées.
 
------------------4565464
+-----------------4565464FEYHEHYHHHHD
 
 ## 10. Déconnexion
 
