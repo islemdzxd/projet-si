@@ -144,3 +144,10 @@ Pour le **Django Admin** (http://localhost:8000/admin/) : identifiant `admin`, m
 
 
 
+
+
+
+
+
+
+
